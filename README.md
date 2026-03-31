@@ -21,3 +21,6 @@
   - Hazy/blurry/static overlaying sprites/screen when mental state gets bad
   - Player's perspective (3rd person) is how the character percieves themselves as well
   - Player (and character) are unclear on how much time passes between scenes
+
+## Attributions
+- Game design, programming, and art - Mossy Jimmerson
