@@ -1,12 +1,12 @@
 # Losing-Connection
 
 ## Notes
+- Game is a puzzle platformer with similar movement as Silksong (horizontal dash + double jump)
 - Every level begins with a rebinding of your controls to randomly unlocked keys
   - Only works on keyboard
   - Controls can be rerolled as many times as the player wants, total rerolls is shown at the end of the game (lower score = better)
     - Accessibility option to play game with unmodified controls
-- Implement similar movement as Silksong (horizontal dash + double jump)
-- If story is included, make it about experience with derealization
+- If story elements are included, make it about experience with derealization
   - Memories are untrustworthy
     - NPCs reference things you don't remember (didn't experience)
     - Some layouts shift slightly when they're viewed at different times (not matching what you remember traversing)
