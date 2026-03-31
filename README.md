@@ -1,6 +1,6 @@
 # Losing-Connection
 
-## Notes
+## Game Design Notes
 - Game is a puzzle platformer with similar movement as Silksong (horizontal dash + double jump)
 - Every level begins with a rebinding of your controls to randomly unlocked keys
   - Only works on keyboard
@@ -15,9 +15,9 @@
     - Dialogue sounds vary from clear to muffled depending on severity of mental state
     - Dialogue choices the player makes aren't always respected (character acts independently from player)
   - Dream sequences that sometimes aren't very distinguishable from 'real' sequences
-    - Start game with a 'dream' sequence that's clearly not real, use hazy overlays to show this
+    - Start game with a 'dream' sequence that's clearly not real, use hazy overlays to show this, maybe even include mixed media
     - Afterwards, a few 'real' sequences that are more clear and distinct
-    - Then, later, start including hazy overlays in 'real' sequences to make the player uncertain on what is and isn't real
+    - Then, later, start including hazy overlays/mixed media in 'real' sequences to make the player uncertain on what is and isn't real
   - Hazy/blurry/static overlaying sprites/screen when mental state gets bad
   - Player's perspective (3rd person) is how the character percieves themselves as well
   - Player (and character) are unclear on how much time passes between scenes
