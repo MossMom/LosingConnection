@@ -270,7 +270,7 @@ script = ExtResource("1_u8ca5")
 z_index = 5
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_w5gv8")
-animation = &"float"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=138942667]
@@ -279,6 +279,9 @@ shape = SubResource("CircleShape2D_b5d4g")
 
 [node name="DashDurationTimer" type="Timer" parent="." unique_id=850628260]
 wait_time = 0.1
+one_shot = true
+
+[node name="DashCooldownTimer" type="Timer" parent="." unique_id=583689890]
 one_shot = true
 
 [node name="CoyoteTimeTimer" type="Timer" parent="." unique_id=469807339]

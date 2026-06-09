@@ -13,6 +13,7 @@ var facingDirectionX = DIRECTION.RIGHT
 var facingDirectionY = DIRECTION.DOWN
 
 @onready var DashDurationTimer = $DashDurationTimer
+@onready var DashCooldownTimer = $DashCooldownTimer
 @export var dashSpeed = 5
 var justDashed = false
 
@@ -81,7 +82,7 @@ func _physics_process(delta: float) -> void:
 		dashTimerStart()
 	if not DashDurationTimer.is_stopped():
 		if velocity.x == 0.0:
-			direction = decodeDirectionX()/4
+			direction = decodeDirectionX()
 			move(direction)
 			print(velocity.x)
 		state = STATE.DASHING
