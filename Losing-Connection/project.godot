@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="Losing Connection"
+run/main_scene="uid://ipnc4w3fmoh4"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Assets/Sprites/icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [physics]
 
@@ -20,5 +27,6 @@ config/icon="res://Assets/Sprites/icon.svg"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
+2d/snap/snap_2d_transforms_to_pixel=true
