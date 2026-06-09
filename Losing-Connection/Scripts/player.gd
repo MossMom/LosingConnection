@@ -79,14 +79,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Dash") and DashCooldownTimer.is_stopped():
 		DashDurationTimer.start()
 		DashCooldownTimer.start()
-	if not DashDurationTimer.is_stopped():
 		if velocity.x == 0.0:
 			direction = decodeDirectionX()
-			move(direction)
+			move(direction * dashSpeed*3.35)
 			print(velocity.x)
+	if not DashDurationTimer.is_stopped():
 		state = STATE.DASHING
-		multVelocityX(dashSpeed)
-		multVelocityY(0)
+		SPEED = 100 * dashSpeed
+	else:
+		SPEED = 100.0
 	
 	move_and_slide()
 	
@@ -104,7 +105,7 @@ func doubleJump():
 	doubleJumped = true
 
 func multVelocityX(amt: float):
-	velocity.x *= amt
+	pass
 
 func multVelocityY(amt: float):
 	velocity.y *= amt
