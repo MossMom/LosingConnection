@@ -15,7 +15,6 @@ var facingDirectionY = DIRECTION.DOWN
 @onready var DashDurationTimer = $DashDurationTimer
 @onready var DashCooldownTimer = $DashCooldownTimer
 @export var dashSpeed = 5
-var justDashed = false
 
 @export var JUMP_VELOCITY = -250.0
 var doubleJumped = false
@@ -31,7 +30,6 @@ func _physics_process(delta: float) -> void:
 		timeOffFloor += delta
 	else:
 		doubleJumped = false
-		justDashed = false
 		timeOffFloor = 0.0
 	
 	# Track fall time
@@ -77,18 +75,14 @@ func _physics_process(delta: float) -> void:
 		multVelocityX(0.8)
 		multVelocityY(0.75)
 	
-	# Dash forwards
-	if Input.is_action_just_pressed("Dash") and justDashed == false:
-		dashTimerStart()
+	# Dash forwards TODO
+	if Input.is_action_just_pressed("Dash") and velocity.x != 0.0 and DashCooldownTimer.is_stopped():
+		DashDurationTimer.start()
+		DashCooldownTimer.start()
 	if not DashDurationTimer.is_stopped():
-		if velocity.x == 0.0:
-			direction = decodeDirectionX()
-			move(direction)
-			print(velocity.x)
 		state = STATE.DASHING
 		multVelocityX(dashSpeed)
 		multVelocityY(0)
-		justDashed = true
 	
 	move_and_slide()
 	
